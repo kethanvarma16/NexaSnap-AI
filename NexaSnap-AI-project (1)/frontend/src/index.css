@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f4f7fb;
+}
+
+body {
+  margin: 0;
+}
+
+button, textarea, select {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e5e9f0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+  background: #1f5eff;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.brand p {
+  margin: 2px 0 0;
+  color: #718096;
+  font-size: 12px;
+}
+
+.status {
+  font-size: 13px;
+  color: #536174;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22a06b;
+}
+
+.content {
+  width: min(1040px, 90%);
+  margin: 0 auto;
+  padding: 55px 0 40px;
+}
+
+.hero {
+  max-width: 720px;
+}
+
+.eyebrow {
+  color: #1f5eff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  margin: 0 0 10px;
+}
+
+.hero h2 {
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.02;
+  margin: 0 0 16px;
+  letter-spacing: -2px;
+}
+
+.hero p:not(.eyebrow) {
+  color: #667085;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 35px 0 20px;
+}
+
+.card {
+  border: 1px solid #e1e7ef;
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(30, 52, 80, .08);
+}
+
+.card span {
+  font-size: 26px;
+}
+
+.card strong {
+  font-size: 15px;
+}
+
+.card small {
+  color: #778296;
+}
+
+.workspace {
+  background: white;
+  border: 1px solid #e1e7ef;
+  border-radius: 22px;
+  padding: 24px;
+}
+
+.workspace-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.workspace h3 {
+  margin: 0 0 5px;
+}
+
+.workspace-head p {
+  color: #778296;
+  margin: 0 0 18px;
+  font-size: 13px;
+}
+
+select {
+  border: 1px solid #dce2ea;
+  padding: 9px 12px;
+  border-radius: 9px;
+  background: white;
+}
+
+textarea {
+  width: 100%;
+  min-height: 135px;
+  resize: vertical;
+  border: 1px solid #dce2ea;
+  border-radius: 14px;
+  padding: 15px;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #1f5eff;
+}
+
+.ask-button {
+  margin-top: 12px;
+  border: 0;
+  border-radius: 11px;
+  padding: 12px 18px;
+  color: white;
+  background: #1f5eff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.ask-button:disabled {
+  opacity: .6;
+}
+
+.answer {
+  margin-top: 18px;
+  padding: 17px;
+  background: #f5f8ff;
+  border-radius: 14px;
+  border: 1px solid #dce7ff;
+  white-space: pre-wrap;
+}
+
+.answer-title {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.answer p {
+  margin: 0;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.snapdragon {
+  margin-top: 20px;
+  border-radius: 22px;
+  padding: 25px;
+  background: #182334;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.snapdragon .eyebrow {
+  color: #8fb0ff;
+}
+
+.snapdragon h3 {
+  margin: 0 0 8px;
+  font-size: 23px;
+}
+
+.snapdragon p:not(.eyebrow) {
+  max-width: 690px;
+  color: #bdc7d7;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.chip {
+  white-space: nowrap;
+  border: 1px solid #3e4e67;
+  padding: 12px 15px;
+  border-radius: 12px;
+}
+
+footer {
+  text-align: center;
+  color: #8a95a6;
+  font-size: 12px;
+  padding: 20px;
+}
+
+@media (max-width: 760px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    padding: 0 5%;
+  }
+
+  .status {
+    display: none;
+  }
+
+  .snapdragon {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
